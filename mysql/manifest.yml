@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql
+  namespace: expense
+spec:
+  resources:
+    requests:
+      storage: 4Gi
+  storageClassName: expense-ebs
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
